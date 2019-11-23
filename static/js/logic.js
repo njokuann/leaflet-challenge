@@ -79,7 +79,13 @@ var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function(myMap) {
     var div = L.DomUtil.create('div', 'legend');
-    div.innerHTML += "<h4>Magnitude</h4>";
+    div.innerHTML += '<h4>Magnitude</h4>';
+    div.innerHTML += '<i style="background: #c1ffc1"></i><span>0-1</span><br>';
+    div.innerHTML += '<i style="background: #7fff00"></i><span>1-2</span><br>';
+    div.innerHTML += '<i style="background: #ff7f50"></i><span>2-3</span><br>';
+    div.innerHTML += '<i style="background: #ee9a00"></i><span><3-4></span><br>';
+    div.innerHTML += '<i style="background: #ff8c00"></i><span><4-5></span><br';
+    div.innerHTML += '<i style="baclground: #ff0000"></i><span><5+></span><br>';
     return div;
 };
 legend.addTo(myMap);
